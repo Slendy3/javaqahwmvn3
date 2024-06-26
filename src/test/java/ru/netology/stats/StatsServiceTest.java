@@ -9,10 +9,10 @@ public class StatsServiceTest {
     public void getSumAllSales() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedSum = 180;
-        int actualSum = service.getAllSum(sales);
+        long actualSum = service.getAllSum(sales);
 
         Assertions.assertEquals(expectedSum, actualSum);
     }
@@ -21,10 +21,10 @@ public class StatsServiceTest {
     public void getAverageSumSales() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedAverage = 15;
-        int actualAverage = service.getAverageSum(sales);
+        long actualAverage = service.getAverageSum(sales);
 
         Assertions.assertEquals(expectedAverage, actualAverage);
     }
@@ -33,7 +33,7 @@ public class StatsServiceTest {
     public void getMaxSales() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedMaxMonth = 8;
         int actualMaxMonth = service.getMaxSales(sales);
@@ -45,7 +45,7 @@ public class StatsServiceTest {
     public void getMinSales() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedMinMonth = 9;
         int actualMinMonth = service.getMinSales(sales);
@@ -57,7 +57,7 @@ public class StatsServiceTest {
     public void getNumberOfMonthsBelowAverageSales() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedMonthsBelowAverage = 5;
         int actualMonthsBelowAverage = service.getNumberOfMonthsBelowAverageSales(sales);
@@ -69,7 +69,7 @@ public class StatsServiceTest {
     public void getNumberOfMonthsAboveAverageSales() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedMonthsAboveAverage = 5;
         int actualMonthsAboveAverage = service.getNumberOfMonthsBelowAverageSales(sales);
